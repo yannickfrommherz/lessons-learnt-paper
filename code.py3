@@ -15,7 +15,5 @@ for file in sorted(os.listdir(test_images_dir)):
 		if line.strip():
 			print("    " + line)		
 
-	# text = text.replace("\n\n", "")
-	# print("    " + text.replace("\n", "/"))
 	print("")
 
