@@ -4,7 +4,7 @@ import os
 
 test_images_dir = "test_images/"
 
-for file in os.listdir(test_images_dir):
+for file in sorted(os.listdir(test_images_dir)):
 	path = test_images_dir + file 
 	print(path)
 	text = pytesseract.image_to_string(Image.open(path), lang="deu")
