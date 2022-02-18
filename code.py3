@@ -2,7 +2,7 @@ from PIL import Image
 import pytesseract
 import os
 
-test_images_dir = "test_images/"
+test_images_dir = "test_images/only_sz/"
 
 for file in sorted(os.listdir(test_images_dir)):
 	path = test_images_dir + file 
