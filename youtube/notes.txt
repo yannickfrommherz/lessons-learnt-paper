@@ -1,0 +1,7 @@
+Für ein einzelnes Video ist die Pipeline jetzt wie folgt:
+	1. Mit download-single-transcript.py [Video-ID] das Video laden, eine JSON-Datei wird in den Ordner results/ geschrieben.
+	2. Mit process-transcript.py [JSON-Datei] kann das Transkript anschließend tokenisiert werden
+	3. Die tokenisierte Datei kann dann ausgewertet werden:
+		collocations.py [Inputdatei] [Fenster links] [Fenster rechts] [Zielwort]
+
+	Theoretisch können die tokenisierten Dateien auch all aneinender geschrieben werden
