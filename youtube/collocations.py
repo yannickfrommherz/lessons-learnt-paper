@@ -78,7 +78,7 @@ output_count = 0
 print("collocate\tlog Dice")
 
 for collocate, ld in sorted_results:
-	if freq[collocate] < 5:
+	if freq[collocate] < 2:
 		continue
 
 	output_count += 1
