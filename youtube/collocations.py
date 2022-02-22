@@ -66,7 +66,7 @@ current_ngram = []
 results = {}
 
 for cooccurence in cooccurrence_freq.keys():
-	ld = log_dice(freq[target_word], freq[cooccurence], cooccurrence_freq[cooccurence])
+	ld = round(log_dice(freq[target_word], freq[cooccurence], cooccurrence_freq[cooccurence]), 2)
 	results[cooccurence] = ld
 
 sorted_results = sorted(results.items(), key=lambda item : item[1], reverse=True)
