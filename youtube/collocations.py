@@ -36,10 +36,8 @@ for token_line in token_lines:
 	word = token_line
 
 
-	if freq.get(word):
-		freq[word] += 1
-	else:
-		freq[word] = 1
+	old_freq = freq.get(word, 0)
+	freq[word] = old_freq + 1
 
 
 	if len(current_ngram) < n:
@@ -83,8 +81,7 @@ for collocate, ld in sorted_results:
 
 	output_count += 1
 
-	# print(f"{collocate}\t{ld}\t{freq[collocate]}")
 	print(f"{collocate}\t{ld}")
 
-	if output_count == 70:
+	if output_count == 30:
 		break
