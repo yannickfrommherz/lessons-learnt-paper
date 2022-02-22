@@ -1,6 +1,5 @@
 import nltk
 import json
-
 import os
 
 RESULTS_DIR = "results/"
