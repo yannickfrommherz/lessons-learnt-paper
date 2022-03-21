@@ -10,27 +10,19 @@ if len(sys.argv) != 2:
 
 id = sys.argv[1]
 
-
 title = HTMLSession().get('https://www.youtube.com/watch?v=' + id).html.find('title', first=True).text
-
 
 result = {}
 transcript = YouTubeTranscriptApi.get_transcript(id, languages=['de'])
 text = ""
 lines = []
 
-
 for line in transcript:
 	lines.append(line['text'])
-
 
 result['title'] = title.replace(" - YouTube", "")
 result['video_id'] = id
 result['transcript'] = lines
-# result['transcript_was_automatically_generated'] = transcript.is_generated
-
 
 json_string = json.dumps(result, ensure_ascii=False, indent=4).encode('utf8')
 open(RESULTS_DIR + id + ".json", "w").write(json_string.decode())
-
-
